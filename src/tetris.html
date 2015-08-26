@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tetris</title>
+		<link rel="stylesheet" href="tetris.css"></link>
+	</head>
+	<body>
+		<div id = "content">
+			<!-- The canvas -->
+			<canvas width="160" height="368"></canvas>
+			 <table id = "results">
+				  <tr>
+				    <td><h2>Score</h2></td>
+				    <td><h3 id = "score">0</h3></td>
+				  </tr>
+				  <tr>
+				    <td><h2>Lines</h2></td>
+				    <td><h3 id = "lines">0</h3></td>
+				  </tr>
+				  <tr>
+				    <td><h2>Level</h2></td>
+				    <td><h3 id = "level">1</h3></td>
+				  </tr>
+			</table>
+
+			<div id = "states">
+				<p>Press <em>p</em> to start / pause the game</p>
+			</div>
+			<p>Use the &#8592; &#8593; &#8594; arrows to move the pieces</p>				
+		</div>
+
+		<script type="text/javascript" src="requestAnimationFramePolyfill.js"></script>
+		<script type="text/javascript" src="objects.js"></script>
+		<script type="text/javascript" src="tetris.js"></script>
+	</body>
+</html>
+
+
