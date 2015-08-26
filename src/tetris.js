@@ -67,13 +67,13 @@
 
 	//Game states
 	var LOADING   = 0;
-	var	PLAYING   = 1;
-	var	OVER      = 2;
-	var	gameState = LOADING;
+	var PLAYING   = 1;
+	var OVER      = 2;
+	var gameState = LOADING;
 
 	//Speed of the falling pieces
 	var cptr          = 0;
-	var	frequency     = 30;
+	var frequency     = 30;
 
 	//Moving time when a piece is dropped
 	var last          = 0;
@@ -81,13 +81,13 @@
 
 	//Directions
 	var moveRight      = false;
-	var	moveLeft       = false;
-	var	moveUp         = false;
-	var	moveSpace      = false;
-	var	spaceKeyIsDown = false;
-	var	rightKeyIsDown = false;
-	var	leftKeyIsDown  = false;
-	var	upKeyIsDown    = false;
+	var moveLeft       = false;
+	var moveUp         = false;
+	var moveSpace      = false;
+	var spaceKeyIsDown = false;
+	var rightKeyIsDown = false;
+	var leftKeyIsDown  = false;
+	var upKeyIsDown    = false;
 	var pauseKeyIsDown = false;
 
 	//Create the background
@@ -116,8 +116,8 @@
 		upManagement : one of the four rotations (0 -> 3)
 	*/
 	var posX         = 3;
-	var	posY         = 0;
-	var	upManagement = 0;
+	var posY         = 0;
+	var upManagement = 0;
 	
 	if(isPossible(currentPiece, posX, posY, upManagement)){
 		newPiece = true;
@@ -294,12 +294,12 @@
   		for(var i = 0, len = sprites.length; i < len; i++){
   			var sprite = sprites[i];
   			drawingSurface.drawImage(
-	        	image, 
-	        	sprite.sourceX, sprite.sourceY, 
-	        	sprite.sourceWidth, sprite.sourceHeight,
-	        	Math.floor(sprite.x), Math.floor(sprite.y+48), 
-	        	sprite.width, sprite.height
-      		); 
+	        		image, 
+	        		sprite.sourceX, sprite.sourceY, 
+	        		sprite.sourceWidth, sprite.sourceHeight,
+	        		Math.floor(sprite.x), Math.floor(sprite.y+48), 
+	        		sprite.width, sprite.height
+      		    	); 
 
   		}
   		
@@ -310,12 +310,12 @@
   				//If it is a block of the current piece
   				if(pieceColor === board.FALLING){
   					drawingSurface.drawImage(
-	        			image, 
-	        			currentPiece.sourceX, currentPiece.sourceY, 
-	        			SIZE, SIZE,
-	        			Math.floor(j*SIZE), Math.floor(i*SIZE), 
-	        			SIZE, SIZE
-	        		); 
+	        				image, 
+	        				currentPiece.sourceX, currentPiece.sourceY, 
+	        				SIZE, SIZE,
+	        				Math.floor(j*SIZE), Math.floor(i*SIZE), 
+	        				SIZE, SIZE
+	        		   	); 
 	        		
   				}
   				//If it is an old block (with one of the 7 colors above)
@@ -354,12 +354,12 @@
   					}
 
   					drawingSurface.drawImage(
-	        			image, 
-	        			x*SIZE, y*SIZE, 
-	        			SIZE, SIZE,
-	        			Math.floor(j*SIZE), Math.floor(i*SIZE), 
-	        			SIZE, SIZE
-	        		); 
+	        				image, 
+	        				x*SIZE, y*SIZE, 
+	        				SIZE, SIZE,
+	        				Math.floor(j*SIZE), Math.floor(i*SIZE), 
+	        				SIZE, SIZE
+	        			); 
   				}
   			}
   		}
@@ -494,7 +494,7 @@
 	 function canMove (direction){
 
 	 	var result = true;
-	 	var	position;
+	 	var position;
 
 	 	switch(direction){
 
